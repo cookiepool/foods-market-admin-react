@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './assets/images/logo.svg';
 import './assets/css/app.css';
+import './assets/css/extra.scss';
+
+import { Button } from 'antd';
 
 
 class App extends React.Component {
@@ -40,6 +43,7 @@ class App extends React.Component {
         <div>
           <p>{ this.state.name }</p>
           <button onClick={this.handleClick}>点我测试</button>
+          <h1 className="scss-style-test">啊哈哈哈哈</h1>
         </div>
         <hr/>
         <div>
@@ -88,6 +92,10 @@ class ChildCom extends React.Component {
           })
         }
         </ul>
+        <hr/>
+        <div>
+          <Button type="primary">Hello,AntD</Button>
+        </div>
       </div>
     )
   }
