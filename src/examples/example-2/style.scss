@@ -1,0 +1,30 @@
+.main-wrap {
+  display: flex;
+  .nav-wrap {
+    width: 25%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    text-align: center;
+    .nav-item {
+      height: 50px;
+      font-size: 18px;
+      line-height: 50px;
+    }
+  }
+  .content-wrap {
+    width: 75%;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+  }
+  
+  .child-nav-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: aquamarine;
+    .child-nav-item {
+      width: 150px;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+}

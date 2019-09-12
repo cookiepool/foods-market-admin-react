@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +9,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,code,del,em,dl,dt,dd,ol,ul,li,input,fieldset,form,legend,
+caption,tbody,tfoot,thead,article,aside,figure,footer,header,nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+img {
+  border: 0;
+}
+ul, li{
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
 }
