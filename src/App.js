@@ -54,7 +54,6 @@ class App extends React.Component {
               <Icon
                 className="trigger"
                 type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-                onClick={this.toggle}
                 style={{fontSize: '26px'}}
                 onClick={ this.toggleNavbar }
               />
