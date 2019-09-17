@@ -1,3 +1,4 @@
+/* 左边导航栏logo部分的样式 */
 .sider-logo {
   margin: 16px;
   .logo-icon {
@@ -12,5 +13,29 @@
     &.collapsed {
       display: none;
     }
+  }
+}
+
+/* header部分的右边导航的样式 */
+.header-wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+.header-index-wraper {
+
+  .user-wraper {
+    cursor: pointer;
+  }
+  .avatar-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  .msg-wraper {
+    margin-right: 16px;
+    padding: 0 8px;
+    cursor: pointer;
   }
 }

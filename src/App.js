@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import './assets/css/app.scss';
 
 // 引入antd
-import { Layout, Icon, Menu } from 'antd';
+import { Layout, Icon, Menu, Dropdown } from 'antd';
 const { Header, Footer, Content, Sider} = Layout;
 
 
@@ -16,25 +16,6 @@ class App extends React.Component {
     this.state = {
       collapsed: false, // 是否折叠左边导航栏
     };
-
-    // 菜单
-    this.menuList = (
-      <Menu>
-        <Menu.item>
-          <Icon type="user"></Icon>
-          <span>个人中心</span>
-        </Menu.item>
-        <Menu.item>
-          <Icon type="setting"></Icon>
-          <span>个人设置</span>
-        </Menu.item>
-        <Menu.Divider />
-        <Menu.item>
-          <Icon type="logout" />
-          <span>退出登录</span>
-        </Menu.item>
-      </Menu>
-    )
   };
   toggleNavbar = () => {
     this.setState({
@@ -43,6 +24,25 @@ class App extends React.Component {
   };
 
   render() {
+    // 菜单
+    const menuList = (
+      <Menu>
+        <Menu.Item key="0">
+          <Icon type="user"></Icon>
+          <span>个人中心</span>
+        </Menu.Item>
+        <Menu.Item key="1">
+          <Icon type="setting"></Icon>
+          <span>个人设置</span>
+        </Menu.Item>
+        <Menu.Divider />
+        <Menu.Item key="2">
+          <Icon type="logout" />
+          <span>退出登录</span>
+        </Menu.Item>
+      </Menu>
+    )
+
     return (
       <div className="all-wraper">
         <Layout>
@@ -75,13 +75,25 @@ class App extends React.Component {
 
           {/* 右边主体内容 */}
           <Layout style={ { minHeight: '100vh' } } >
-            <Header style={{ background: '#fff', paddingLeft: '16px' }}>
+            <Header className="header-wraper" style={{ background: '#fff', paddingLeft: '16px' }}>
               <Icon
                 className="trigger"
                 type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
                 style={{fontSize: '26px'}}
                 onClick={ this.toggleNavbar }
               />
+              <div className="header-index-wraper flex-all-center">
+                <div className="msg-wraper">
+                  <Icon type="bell"></Icon>
+                </div>
+                {/* DropDown这个组件在里面写内容时需要用一个父元素把其它的包裹起来，不然报错 */}
+                <Dropdown overlay={ menuList }>
+                  <div className="user-wraper">
+                    <img className="avatar-img" src={ require('./assets/images/default_avatar.jpg') } alt="avatar"/>
+                    <span>{ 'Haoo Lee' }</span>
+                  </div>
+                </Dropdown>
+              </div>
             </Header>
             <Content
               style={{
