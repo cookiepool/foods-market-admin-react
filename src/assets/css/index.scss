@@ -1,3 +1,7 @@
+/*
+*** 这个文件用来保存公共样式
+*/
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -27,4 +31,19 @@ ul, li{
 a {
   text-decoration: none;
   color: #333;
+}
+.flex-all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-btn-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-ard-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

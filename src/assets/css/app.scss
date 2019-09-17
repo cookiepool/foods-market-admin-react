@@ -1,0 +1,16 @@
+.sider-logo {
+  margin: 16px;
+  .logo-icon {
+    width: 90px;
+    &.collapsed {
+      width: 35px;
+    }
+  }
+  .logo-title {
+    font-size: 26px;
+    color: #fff;
+    &.collapsed {
+      display: none;
+    }
+  }
+}
