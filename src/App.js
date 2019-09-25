@@ -1,9 +1,14 @@
 import React from 'react';
-
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 // 引入样式
 import './assets/css/app.scss';
+
+// 引入mock api
+import api from './api';
+
+// 引入自定义组件
+import Msg from './components/header/MsgBoard.js';
 
 // 引入antd
 import { Layout, Icon, Menu, Dropdown } from 'antd';
@@ -16,12 +21,26 @@ class App extends React.Component {
     this.state = {
       collapsed: false, // 是否折叠左边导航栏
     };
-  };
+  }
   toggleNavbar = () => {
     this.setState({
       collapsed: !this.state.collapsed
     });
-  };
+  }
+
+  componentDidMount() {
+    api.test().then((res) => {
+      console.log(res.data);
+    }).catch((err) => {
+      console.log(err);
+    });
+
+    api.msg.getUserMsg().then((res) => {
+      console.log(res.data);
+    }).catch((err) => {
+      console.log(err);
+    });
+  }
 
   render() {
     // 菜单
@@ -83,9 +102,11 @@ class App extends React.Component {
                 onClick={ this.toggleNavbar }
               />
               <div className="header-index-wraper flex-all-center">
-                <div className="msg-wraper">
-                  <Icon type="bell"></Icon>
-                </div>
+                <Dropdown overlay={ Msg } trigger={ ['click'] }>
+                  <div className="msg-wraper">
+                    <Icon type="bell"></Icon>
+                  </div>
+                </Dropdown>
                 {/* DropDown这个组件在里面写内容时需要用一个父元素把其它的包裹起来，不然报错 */}
                 <Dropdown overlay={ menuList }>
                   <div className="user-wraper">

@@ -35,7 +35,10 @@
   }
   .msg-wraper {
     margin-right: 16px;
-    padding: 0 8px;
+    padding: 0 16px;
     cursor: pointer;
+  }
+  .msg-wraper:hover {
+    background: rgba(0,0,0,.025);
   }
 }
