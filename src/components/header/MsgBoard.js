@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../../assets/css/header/header.scss';
+
 import { Tabs } from 'antd';
 const { TabPane } = Tabs;
 
@@ -26,7 +28,7 @@ class Msg extends React.Component {
           <TabPane tab="消息（2）" key="2">
             content two
           </TabPane>
-          <TabPane tab="代办（3）" key="3">
+          <TabPane tab="待办（3）" key="3">
             content three
           </TabPane>
         </Tabs>

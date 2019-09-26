@@ -50,7 +50,7 @@ Mock.mock("http://test.com/test", {
   }],
   "listData|2-10": [{
     "id": () => Mock.Random.integer(11),
-    "name": function() { return Mock.Random.ctitle()},
+    "name": function() { return Mock.Random.ctitle() },
     "date": () => Mock.Random.date('yyyy-MM-dd')
   }]
 });
