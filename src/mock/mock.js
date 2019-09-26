@@ -61,3 +61,29 @@ Mock.mock("http://xiaocai.com/user/msg", {
     "id|+1": "@INTEGER(5)"
   }]
 });
+// 个人页-个人中心-文章、应用、项目
+Mock.mock("http://xiaocai.com/user/article", {
+  "articleList|3-9": [{
+    "title": () => {
+      if(Math.random() < 0.5) {
+        return "Alibaba";
+      }else {
+        return "MicroSoft";
+      }
+    },
+    "tags": ['Ant Design', '设计语言', '蚂蚁金服'],
+    "content": "@CPARAGRAPH(3, 7)",
+    "user": "@CTITLE",
+    "URL": "@URL('http')",
+    "time": "@DATETIME('yyyy-MM-dd hh:mm')",
+    "collection|200-2000": 666,
+    "commend|100-1000": 666,
+    "message|10-200": 66 
+  }],
+  "applicationList|8-16": [{
+
+  }],
+  "projectList|6-12": [{
+
+  }]
+});

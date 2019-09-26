@@ -9,5 +9,14 @@ export default {
         reject(err);
       });
     });
+  },
+  getUserInfo() {
+    return new Promise((resolve, reject) => {
+      axios.get('http://xiaocai.com/user/article').then((res) => {
+        resolve(res);
+      }).catch((err) => {
+        reject(err);
+      });
+    });
   }
 }

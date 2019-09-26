@@ -129,7 +129,7 @@ class App extends React.Component {
                   <Dropdown overlay={ menuList }>
                     <div className="user-wraper">
                       <img className="avatar-img" src={ require('./assets/images/default_avatar.jpg') } alt="avatar"/>
-                      <span>{ 'Haoo Lee' }</span>
+                      <span>{ 'Cookie Pool' }</span>
                     </div>
                   </Dropdown>
                 </div>
