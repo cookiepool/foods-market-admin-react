@@ -98,7 +98,7 @@ class UserCenter extends React.Component {
                         <Tag>{ item.tags[2] }</Tag>
                       </div>
                       <Paragraph>{ item.content }</Paragraph>
-                      <div className="detail-public">
+                      <div className="detail-public flex-start-center">
                         <Icon type="github" theme="filled" style={ {fontSize: '26px', marginRight: '16px'} }/>
                         <span className="deepen-color">{ item.user }</span>发布在<span className="deepen-color">{ item.URL }</span>
                       </div>
@@ -109,11 +109,11 @@ class UserCenter extends React.Component {
                         </span>
                         <span className="feedback-box">
                           <Icon type="like" />
-                          { item.collection }
+                          { item.commend }
                         </span>
                         <span className="feedback-box">
                           <Icon type="message" />
-                          { item.collection }
+                          { item.message }
                         </span>
                       </div>
                     </div>

@@ -40,11 +40,41 @@
       padding: 0 16px;
     }
     .item-detail {
-      padding: 0 24px;
+      padding: 16px 24px ;
       border-bottom: 1px solid #e8e8e8;
       .deepen-color {
         color: #fa541c;
       }
     }
+    .detail-tags-box {
+      margin-bottom: 8px;
+    }
+    .detail-public {
+      margin-bottom: 8px;
+    }
+    .detail-feedback {
+      .feedback-box {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+/** UserList.js **/
+.userlist-wraper {
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 16px;
+  .search-options {
+    .input-box {
+      width: 200px;
+    }
+    .input-tag {
+      margin-right: 12px;
+    }
+  }
+
+  .content-wrap {
+    margin-top: 32px;
   }
 }

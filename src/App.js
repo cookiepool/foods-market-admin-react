@@ -18,6 +18,7 @@ const { SubMenu } = Menu;
 // 懒加载
 const UserCenter = React.lazy(() => import('./components/user/UserCenter.js'));
 const UserSet = React.lazy(() => import('./components/user/UserSet.js'));
+const UserList = React.lazy(() => import('./components/manage/UserList.js'));
 
 class App extends React.Component {
   constructor(props) {
@@ -88,8 +89,10 @@ class App extends React.Component {
                   <span>数据状态</span>
                 </Menu.Item>
                 <Menu.Item key="2">
-                  <Icon type="team" />
-                  <span>用户管理</span>
+                  <Link to="/userlist">
+                    <Icon type="team" />
+                    <span>用户管理</span>
+                  </Link>
                 </Menu.Item>
                 <SubMenu key="sub1"
                   title={
@@ -136,14 +139,15 @@ class App extends React.Component {
               </Header>
               <Content
                 style={{
-                  margin: '24px 16px',
-                  padding: 24,
+                  margin: '24px 0px',
+                  padding: '0 24px',
                   minHeight: '600px',
                 }}
               >
                 <React.Suspense fallback={ <div><Spin size="large" /></div> }>
                   <Route path="/usercenter" component={ UserCenter }></Route>
                   <Route path="/userset" component={ UserSet }></Route>
+                  <Route path="/userlist" component={ UserList }></Route>
                 </React.Suspense>
               </Content>
               <Footer>Footer</Footer>
